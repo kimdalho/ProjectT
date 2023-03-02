@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnerManager : MonoBehaviour
 {
@@ -22,11 +23,15 @@ public class SpawnerManager : MonoBehaviour
         {
             for (int i = 0; i < monsterSpawners.Count; i++)
             {
-                monsterSpawners[i].CreateMonster();
+                int id = Get_Random_Monster_Id();
+                monsterSpawners[i].CreateMonster(id);
                 cnt--;
             }
         }
+    }
 
-        
+    private int Get_Random_Monster_Id()
+    {
+        return Random.Range(1, MonsterDataDB.instance.monsterDic.Count);
     }
 }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -18,6 +20,8 @@ public class MonsterDataDB : MonoBehaviour
 
     //monsterDic[곰인형]
     public Dictionary<eMonsterType, MonsterData> monsterDic = new Dictionary<eMonsterType, MonsterData>();
+
+    public static Dictionary<string, Type> mDic;
 
 
     //몬스터별 클래스가 존재한다면 영어로 바꿔야함
@@ -43,9 +47,13 @@ public class MonsterDataDB : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        Initalize();
+    }
+    
+    private void Initalize()
+    {
         //딕셔너리 완성
-        foreach(var monData in MonsterDataList)
+        foreach (var monData in MonsterDataList)
         {
             monsterDic.Add((eMonsterType)monData.id, monData);
         }

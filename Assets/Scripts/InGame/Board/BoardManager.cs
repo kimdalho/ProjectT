@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 //서비스 역할
@@ -13,20 +14,21 @@ public class BoardManager : MonoBehaviour
     public int MAX_X_SIZE;
     public int MAX_Y_SIZE;
 
-    //보드의 정보를 담고있는 이차배열
+    //보드의 정보를 담고있는 이차배열(x,z)
     public Board[,] boards;
 
     //보드의 데이터 정보를 가지고있다.
     public int[,,] boardMaster;
 
-    //[x,y,0] = 1이면 해당 타일은 몬스터를 생성하는 스포너가 된다.
-    public const int SPAWN_BOARD = 0;
-
-
+    //보드의 속성값을 정의하는 3차 배열이다
+    [Header("Layer")]
+    //[x,y,0] = 1이면 해당 타일은 벽이 된다
+    public const int Wall_Layer = 0;
     public void Setup()
     {
         //보드 생성
         boards = new Board[MAX_X_SIZE, MAX_Y_SIZE];
+
         for (int y =0; y < MAX_Y_SIZE; y++)
         {
             for (int x = 0; x < MAX_X_SIZE; x++)
