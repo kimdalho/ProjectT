@@ -18,6 +18,7 @@ public class SpawnerManager : MonoBehaviour
         //생성할 웨이브 몬스터 갯수 50으로 초기화
         int cnt = 50;
 
+
         //생성할 갯수가 0보다 크다면 생성
         while(cnt > 0)
         {

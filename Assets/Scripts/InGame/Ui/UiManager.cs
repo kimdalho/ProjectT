@@ -31,9 +31,6 @@ public class UiManager : MonoBehaviour
         btnGameStart = canvas.transform.Find("BtnGameStart").GetComponent<Button>();
         btnGameStart.gameObject.SetActive(true);
         btnGameStart.onClick.AddListener(OnClickGameStart);
-
-
-
     }
 
     private void OnClickGameStart()

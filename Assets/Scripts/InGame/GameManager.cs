@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public SpawnerManager spawnerMgr;
     public BoardManager boardMgr;
+    public PathfindManager pathMgr;
 
     private void Awake()
     {

@@ -15,5 +15,10 @@ public class MonsterData : ScriptableObject
     public float moveSpeed;
     //대상 프리펩
     public GameObject modelPrefab;
+    //등급
+    public int grade;
 
 }
+
+//등급 존재이유
+//획득 경험치는 등급에 따라 차등을 나눈다.
