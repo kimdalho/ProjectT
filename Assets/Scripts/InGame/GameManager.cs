@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     {
         //보드매니저 초기화
         boardMgr.Setup();
+        //스포너 배치
+        spawnerMgr.Setup();
     }
     
 

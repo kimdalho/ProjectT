@@ -166,11 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005ba5f96eac91746ac61efad0ee59a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterDataList:
+  monsterStatList:
   - {fileID: 11400000, guid: c43fa98887b6cee40ae5b15c78298f54, type: 2}
   - {fileID: 11400000, guid: 6ebce6ce178916f4996362c10e553a22, type: 2}
   - {fileID: 11400000, guid: 77d87ef5aa1e8754e9f57c15d406f34a, type: 2}
   - {fileID: 11400000, guid: db9ef4ef72414bb4794ea1dffd7a7d93, type: 2}
+  - {fileID: 11400000, guid: 9d7313010d0dde344bcb9c5aa36018d8, type: 2}
   - {fileID: 11400000, guid: cefc98ae434f0b74c9de6c62c7459d57, type: 2}
 --- !u!1 &570110171
 GameObject:
@@ -760,7 +761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -415.1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 105.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967194971

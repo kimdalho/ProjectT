@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aaa61a3b5e1c9d4b8839bc8f51e5869, type: 3}
-  m_Name: "2\uBCD1\uC815"
+  m_Name: "2\uC790\uB3D9\uCC28"
   m_EditorClassIdentifier: 
+  toyType: 2
   id: 2
-  _name: "\uBCD1\uC815"
+  _name: "\uC790\uB3D9\uCC28"
   hp: 15
   damage: 5
   sightRange: 3
   moveSpeed: 3
   modelPrefab: {fileID: 6505773551537115600, guid: cfadf8d5872c69344b8cd31d395fdbf2, type: 3}
+  grade: 0

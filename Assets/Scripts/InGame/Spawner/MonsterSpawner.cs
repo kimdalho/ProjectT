@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static MonsterDataDB;
@@ -18,27 +19,28 @@ public class MonsterSpawner : MonoBehaviour
     //디테일한 기획 필요
 
     //몬스터들은 각기 다른 클래스를 가질것인가.
-    public MonsterModel CreateMonster(int id)
+    public BaseToy CreateMonster(int id)
     {
+        Debug.Log("테스트" + (eToy)id);
+
         //기획안 없음 
         //생성할 몬스터는 DB에서 랜덤으로 정한다.
-       
-
-        //생성할 몬스터 정의
-        //가능하면 관리가 복잡해지더라도
-        //몬스터의 클래스를 따로 두고 생성하고싶다.
-
-        //생성할 몬스터Data Get
-        var info = monDB.monsterDic[(eMonsterType)id];
+        var info = monDB.monsterStatDic[(eToy)id];
 
         //정보의 프리펩에 접근해서 몬스터 생성
         var go = Instantiate(info.modelPrefab);
         go.transform.position = this.transform.position;
 
         //비어있는 대상에게 정보 삽입
-        go.AddComponent<MonsterModel>().info = info;
+        //go.AddComponent<MonsterModel>().info = info;
+        var scriptType = monDB.GetTypeMy(info.toyType.ToString());
+         go.AddComponent(scriptType);
 
-        MonsterModel newMon = go.GetComponent<MonsterModel>();
+
+        //삭제 MonsterModel
+        BaseToy newMon = go.GetComponent<BaseToy>();
+        newMon.info = info;
+        newMon.Setup();
         //스포너 관리자에게 반환
         return newMon;
     }

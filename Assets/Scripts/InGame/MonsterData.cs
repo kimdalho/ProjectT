@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Monster Data", menuName = "Scriptable Object/Monster Data", order = int.MaxValue)]
 public class MonsterData : ScriptableObject
 {
+    public eToy toyType;
+
     public int id;
     public string _name;
     public int hp;
